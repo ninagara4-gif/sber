@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Статистика — Худеем</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <section class="phone" aria-label="Экран статистики приложения Худеем">
+        <div class="gradient-bg" aria-hidden="true">
+          <div class="gradient-wrap"><img src="assets/bg-gradient.svg" alt="" /></div>
+        </div>
+
+        <header class="app-header stats-header">
+          <div class="status-bar">
+            <span class="status-time">20:01</span>
+            <div class="status-levels" aria-hidden="true">
+              <img class="cellular" src="assets/cellular.svg" alt="" />
+              <img class="wifi" src="assets/wifi.svg" alt="" />
+              <span class="battery"><span class="battery-fill"></span><img src="assets/battery-cap.svg" alt="" /></span>
+            </div>
+          </div>
+          <h1>Статистика</h1>
+        </header>
+
+        <div class="content stats-content">
+          <section class="calendar-card">
+            <div class="calendar-head">
+              <strong>Сентябрь 2026</strong>
+              <img src="assets/calendar.svg" alt="" />
+            </div>
+            <div class="calendar-divider"></div>
+            <div class="week">
+              <button class="day" type="button" data-day="13" aria-pressed="false"><span>пн</span><b>13</b></button>
+              <button class="day" type="button" data-day="14" aria-pressed="false"><span>вт</span><b>14</b></button>
+              <button class="day" type="button" data-day="15" aria-pressed="false"><span>ср</span><b>15</b></button>
+              <button class="day" type="button" data-day="16" aria-pressed="false"><span>чт</span><b>16</b></button>
+              <button class="day selected" type="button" data-day="17" aria-pressed="true"><span>пт</span><b>17</b></button>
+              <button class="day muted" type="button" disabled><span>сб</span><b>18</b></button>
+              <button class="day muted" type="button" disabled><span>вс</span><b>19</b></button>
+            </div>
+          </section>
+
+          <section class="focus-section">
+            <div class="focus-title"><span>Фокус на сегодня</span><img src="assets/focus-icon.svg" alt="" /></div>
+            <div class="focus-card">
+              <div class="focus-summary">
+                <div class="focus-metric">
+                  <span class="focus-label">Питание</span>
+                  <div class="focus-ring food-ring">
+                    <img class="ring-base" src="assets/ellipse-1.svg" alt="" />
+                    <svg class="ring-progress" viewBox="0 0 75 75" aria-hidden="true">
+                      <circle cx="37.5" cy="37.5" r="33.8592" pathLength="100" />
+                    </svg>
+                    <strong id="food-percent">69%</strong>
+                  </div>
+                  <span class="focus-caption">Хорошо! по плану</span>
+                </div>
+                <div class="focus-separator"></div>
+                <div class="focus-metric">
+                  <span class="focus-label">Активность</span>
+                  <div class="focus-ring activity-ring">
+                    <img class="ring-base" src="assets/ellipse-1.svg" alt="" />
+                    <svg class="ring-progress" viewBox="0 0 75 75" aria-hidden="true">
+                      <circle cx="37.5" cy="37.5" r="33.8592" pathLength="100" />
+                    </svg>
+                    <strong id="activity-percent">53%</strong>
+                  </div>
+                  <span class="focus-caption">Не хватает до нормы</span>
+                </div>
+              </div>
+              <div class="recommendation">
+                <div class="recommendation-copy">
+                  <strong>😅 Сегодня ниже плана по активности</strong>
+                  <p><span>В течение дня моя энергия постепенно</span><span>снижается, и я начинаю чувствовать</span><span>усталость и потерю концентрации...</span></p>
+                </div>
+                <button class="primary-button" id="open-recommendation" type="button">Читать рекомендацию</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="widgets">
+            <article class="card nutrition-card">
+              <div class="card-top">
+                <div class="card-title"><img src="assets/fork-knife.svg" alt="" /><strong>Питание</strong></div>
+                <div class="add-button"><img src="assets/plus.svg" alt="" /></div>
+              </div>
+              <div class="main-number"><strong>1 235</strong><span>/</span><span>1 800 ккал</span></div>
+              <div class="macro-grid">
+                <div class="macro protein">
+                  <div class="macro-head"><i></i><span>Белки</span></div>
+                  <div class="macro-bar"><i></i></div>
+                  <div class="macro-value"><b>12</b><span>/93 г</span></div>
+                </div>
+                <div class="macro fat">
+                  <div class="macro-head"><i></i><span>Жиры</span></div>
+                  <div class="macro-bar"><i></i></div>
+                  <div class="macro-value"><b>9</b><span>/48 г</span></div>
+                </div>
+                <div class="macro carbs">
+                  <div class="macro-head"><i></i><span>Углеводы</span></div>
+                  <div class="macro-bar"><i></i></div>
+                  <div class="macro-value"><b>9</b><span>/48 г</span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card activity-card">
+              <div class="card-top">
+                <div class="card-title"><img src="assets/fire.svg" alt="" /><strong>Активность</strong></div>
+                <div class="add-button"><img src="assets/plus.svg" alt="" /></div>
+              </div>
+              <div class="main-number"><strong>269</strong><span>/</span><span>427 ккал</span></div>
+              <div class="progress-row"><div class="progress"><i style="width:69%"></i></div><b>69%</b></div>
+              <div class="widget-divider"></div>
+              <div class="activity-stats">
+                <div><span><img src="assets/walking-small.svg" alt="" />Шаги</span><strong>5 301</strong></div>
+                <div><span><img src="assets/dumbbell.svg" alt="" />Тренировка</span><strong>18 <em>мин</em></strong></div>
+              </div>
+            </article>
+
+            <article class="card water-card">
+              <div class="card-top">
+                <div class="card-title"><img src="assets/water-cup.svg" alt="" /><strong>Вода</strong></div>
+                <div class="add-button"><img src="assets/plus.svg" alt="" /></div>
+              </div>
+              <div class="main-number"><strong>0.8</strong><span>/</span><span>2 л</span></div>
+              <div class="water-drops">
+                <img src="assets/water-filled.svg" alt="" /><img src="assets/water-filled.svg" alt="" /><img src="assets/water-filled.svg" alt="" /><img src="assets/water-filled.svg" alt="" />
+                <img src="assets/water-empty.svg" alt="" /><img src="assets/water-empty.svg" alt="" /><img src="assets/water-empty.svg" alt="" /><img src="assets/water-empty.svg" alt="" /><img src="assets/water-empty.svg" alt="" /><img src="assets/water-empty.svg" alt="" />
+              </div>
+            </article>
+
+            <article class="card compact-card">
+              <div class="card-top">
+                <div class="card-title"><img src="assets/walking.svg" alt="" /><strong>Шаги</strong></div>
+                <div class="add-button"><img src="assets/plus.svg" alt="" /></div>
+              </div>
+              <div class="main-number"><strong>5 301</strong><span>/</span><span>10 000</span></div>
+              <div class="progress-row"><div class="progress"><i style="width:53%"></i></div><b>53%</b></div>
+            </article>
+
+            <article class="card compact-card sleep-card">
+              <div class="card-top">
+                <div class="card-title"><img src="assets/sleep.svg" alt="" /><strong>Сон</strong></div>
+                <div class="add-button"><img src="assets/plus.svg" alt="" /></div>
+              </div>
+              <div class="sleep-number"><strong>6</strong><span>ч</span><strong>18</strong><span>мин</span><i>/</i><span>8 ч 30 мин</span></div>
+              <div class="progress-row"><div class="progress"><i style="width:94%"></i></div><b>74%</b></div>
+            </article>
+
+            <article class="card weight-card">
+              <div class="card-top">
+                <div class="card-title"><img src="assets/scales.svg" alt="" /><strong>Вес</strong></div>
+                <div class="add-button"><img src="assets/plus.svg" alt="" /></div>
+              </div>
+              <div class="main-number"><strong>60,2</strong><span>/</span><span>65 кг</span></div>
+            </article>
+          </section>
+        </div>
+
+        <header class="app-header recommendation-header" aria-hidden="true">
+          <div class="status-bar">
+            <span class="status-time">20:01</span>
+            <div class="status-levels" aria-hidden="true">
+              <img class="cellular" src="assets/cellular.svg" alt="" />
+              <img class="wifi" src="assets/wifi.svg" alt="" />
+              <span class="battery"><span class="battery-fill"></span><img src="assets/battery-cap.svg" alt="" /></span>
+            </div>
+          </div>
+          <div class="chat-heading">
+            <button class="back-button" id="close-recommendation" type="button" aria-label="Вернуться к статистике"><span></span></button>
+            <h1>Чат</h1>
+          </div>
+        </header>
+
+        <section class="recommendation-view" aria-hidden="true">
+          <div class="assistant-copy">
+            <strong class="assistant-hello">Привет!</strong>
+            <p>Я твой ИИ-помощник по ЗОЖ — помогу<br />вести дневник питания, сна и тренировок,<br />следить за водой и считать КБЖУ.</p>
+            <div class="assistant-divider"></div>
+            <strong class="assistant-can">Я умею:</strong>
+            <ul>
+              <li>Записывать, что и сколько ты съел — посчитаю калории, белки, жиры и углеводы.</li>
+              <li>Отслеживать воду (в мл или стаканах) и сон (время и количество часов).</li>
+              <li>Фиксировать тренировки, длительность и ориентировочный расход калорий.</li>
+              <li>Хранить и обновлять параметры — вес, рост, пол и дату рождения.</li>
+              <li>Помогать ставить цели: похудеть, набрать или удерживать вес.</li>
+              <li>Подбирать дневные цели — калории, БЖУ, воду, сон и активность.</li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="chat-jump" aria-hidden="true"><span></span></div>
+        <div class="chat-composer" aria-hidden="true">
+          <div class="composer-plus"><img src="assets/plus.svg" alt="" /></div>
+          <div class="composer-field"><span>Спросите...</span><span class="composer-caret"></span></div>
+          <div class="composer-mic">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8.5" y="2.5" width="7" height="13" rx="3.5"></rect><path d="M5.5 11.5v1a6.5 6.5 0 0 0 13 0v-1M12 19v3M9 22h6"></path></svg>
+          </div>
+        </div>
+
+        <nav class="tabbar" aria-label="Нижняя навигация">
+          <img src="assets/chart-square.svg" alt="Статистика" />
+          <img class="chat-icon" src="assets/chat-ai.svg" alt="ИИ-помощник" />
+          <img src="assets/profile-circle.svg" alt="Профиль" />
+          <span class="home-indicator"></span>
+        </nav>
+      </section>
+    </main>
+    <script>
+      const phone = document.querySelector('.phone');
+      const recommendationView = document.querySelector('.recommendation-view');
+      const recommendationHeader = document.querySelector('.recommendation-header');
+      const openRecommendation = document.querySelector('#open-recommendation');
+      const closeRecommendation = document.querySelector('#close-recommendation');
+      const activeDays = document.querySelectorAll('.day[data-day]');
+      const foodPercent = document.querySelector('#food-percent');
+      const activityPercent = document.querySelector('#activity-percent');
+      const foodRing = document.querySelector('.food-ring .ring-progress circle');
+      const activityRing = document.querySelector('.activity-ring .ring-progress circle');
+      const recommendationTitle = document.querySelector('.recommendation-copy > strong');
+      const recommendationLines = document.querySelectorAll('.recommendation-copy p span');
+
+      const dayContent = {
+        13: {
+          food: 78,
+          activity: 42,
+          title: '🌿 Начни неделю в комфортном темпе',
+          lines: ['Питание близко к цели, но активности', 'сегодня немного не хватает. Добавь', 'короткую прогулку после обеда...']
+        },
+        14: {
+          food: 56,
+          activity: 71,
+          title: '💪 Отличный день для движения',
+          lines: ['Активность выше обычного, а питание', 'можно немного выровнять. Выбери', 'лёгкий и сбалансированный ужин...']
+        },
+        15: {
+          food: 84,
+          activity: 64,
+          title: '✨ Сегодня хороший баланс',
+          lines: ['Ты уверенно держишь темп по питанию', 'и активности. Сохрани этот ритм', 'и не забудь немного отдохнуть...']
+        },
+        16: {
+          food: 62,
+          activity: 38,
+          title: '🚶 Стоит немного больше двигаться',
+          lines: ['Сегодня организму не хватает движения.', 'Небольшая прогулка поможет вернуть', 'энергию и сохранить концентрацию...']
+        },
+        17: {
+          food: 69,
+          activity: 53,
+          title: '😅 Сегодня ниже плана по активности',
+          lines: ['В течение дня моя энергия постепенно', 'снижается, и я начинаю чувствовать', 'усталость и потерю концентрации...']
+        }
+      };
+
+      let ringAnimationToken = 0;
+
+      function animateRing(ring, value, token) {
+        ring.style.strokeDasharray = '0 100';
+        requestAnimationFrame(() => {
+          if (token !== ringAnimationToken) return;
+          requestAnimationFrame(() => {
+            if (token !== ringAnimationToken) return;
+            ring.style.strokeDasharray = `${value} 100`;
+          });
+        });
+      }
+
+      function selectDay(dayButton) {
+        const content = dayContent[dayButton.dataset.day];
+        if (!content) return;
+
+        activeDays.forEach((button) => {
+          const selected = button === dayButton;
+          button.classList.toggle('selected', selected);
+          button.setAttribute('aria-pressed', String(selected));
+        });
+
+        foodPercent.textContent = `${content.food}%`;
+        activityPercent.textContent = `${content.activity}%`;
+        recommendationTitle.textContent = content.title;
+        recommendationLines.forEach((line, index) => {
+          line.textContent = content.lines[index];
+        });
+
+        ringAnimationToken += 1;
+        animateRing(foodRing, content.food, ringAnimationToken);
+        animateRing(activityRing, content.activity, ringAnimationToken);
+      }
+
+      function showRecommendation(show) {
+        phone.classList.toggle('recommendation-open', show);
+        recommendationView.setAttribute('aria-hidden', String(!show));
+        recommendationHeader.setAttribute('aria-hidden', String(!show));
+        if (show) recommendationView.scrollTop = 0;
+      }
+
+      openRecommendation.addEventListener('click', () => showRecommendation(true));
+      closeRecommendation.addEventListener('click', () => showRecommendation(false));
+      activeDays.forEach((button) => button.addEventListener('click', () => selectDay(button)));
+    </script>
+  </body>
+</html>
